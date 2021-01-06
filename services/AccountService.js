@@ -1,4 +1,4 @@
-import { getRepository } from 'typeorm-expo/browser';
+import { getRepository } from 'typeorm';
 import { AES, enc } from 'crypto-js';
 
 import { AccountModel, AccountError } from '../db';

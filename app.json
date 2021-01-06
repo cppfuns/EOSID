@@ -4,8 +4,10 @@
     "description": "Open Source EOS Wallet",
     "slug": "EOSID",
     "privacy": "public",
-    "sdkVersion": "31.0.0",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "version": "0.1.8",
     "orientation": "portrait",
     "splash": {
@@ -16,7 +18,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "io.gamexcoin.eosid",
@@ -26,28 +30,37 @@
       "versionCode": 10,
       "package": "io.gamexcoin.eosid",
       "icon": "./assets/images/icon_android.png",
-      "intentFilters": [{
-        "action": "VIEW",
-        "autoVerify": true,
-        "data": {
-          "scheme": "eosid",
-          "host": "eosid.gamexcoin.io",
-          "pathPrefix": "/"
-        },
-        "category": ["BROWSABLE", "DEFAULT"]
-      }],
-      "permissions": ["CAMERA"]
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": {
+            "scheme": "eosid",
+            "host": "eosid.gamexcoin.io",
+            "pathPrefix": "/"
+          },
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
+      "permissions": [
+        "CAMERA"
+      ]
     },
     "scheme": "eosid",
     "hooks": {
-      "postPublish": [{
-        "file": "sentry-expo/upload-sourcemaps",
-        "config": {
-          "organization": "gamexcoin",
-          "project": "eosid",
-          "authToken": "250c6b111a4a4e7f9d5e93291bf866250f4659d8f6fb40608d70c9f1f3efb9ae"
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "gamexcoin",
+            "project": "eosid",
+            "authToken": "250c6b111a4a4e7f9d5e93291bf866250f4659d8f6fb40608d70c9f1f3efb9ae"
+          }
         }
-      }]
+      ]
     }
   }
 }

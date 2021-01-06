@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { observable } from 'mobx';
-import { observer, inject } from 'mobx-react/native';
+import { observer, inject } from 'mobx-react';
 import { StyleSheet, View } from 'react-native';
-import { AppLoading, Font, Icon } from 'expo';
+import { AppLoading, Icon } from 'expo';
+import { Font } from 'expo-font';
 
 import AppNavigator from './navigation/AppNavigator';
 import { MainStackNavigator } from './navigation/navigators';

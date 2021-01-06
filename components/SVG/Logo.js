@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Svg } from 'expo';
+import { Svg } from 'react-native-svg';
 
 export class Logo extends Component {
   render() {

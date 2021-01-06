@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Provider } from 'mobx-react/native';
+import { Provider } from 'mobx-react';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import Sentry from 'sentry-expo';
 
@@ -18,7 +18,7 @@ import {
 // Sentry.enableInExpoDevelopment = true;
 
 // initialize sentry
-Sentry.config(process.env.SENTRY_CONFIG).install();
+//Sentry.config(process.env.SENTRY_CONFIG).install();
 
 const theme = {
   ...DefaultTheme,

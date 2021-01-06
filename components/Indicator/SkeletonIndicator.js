@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Animated } from 'react-native';
-import { Svg } from 'expo';
+import { Svg } from 'react-native-svg';
 import { interpolate } from 'd3-interpolate';
 
 const AnimatedSvg = Animated.createAnimatedComponent(Svg);

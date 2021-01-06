@@ -1,11 +1,11 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
 import { Linking } from 'react-native';
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import { Linking as ExpoLinking } from 'expo';
 
-import StackViewStyleInterpolator from 'react-navigation-stack/dist/views/StackView/StackViewStyleInterpolator';
+import StackViewStyleInterpolator from 'react-navigation-stack/src/views/StackView/StackViewStyleInterpolator';
 
 import {
   AccountScreen,

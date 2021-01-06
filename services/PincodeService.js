@@ -1,4 +1,4 @@
-import { SecureStore } from 'expo';
+import { SecureStore } from 'expo-secure-store';
 
 const SECURE_STORE_APP_PINCODE = 'app-pincode';
 const SECURE_STORE_ACCOUNT_PINCODE = 'account-pincode';

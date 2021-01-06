@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createMaterialTopTabNavigator } from 'react-navigation';
+import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
 import { Appbar } from 'react-native-paper';
 
 import { StakeResource } from './StakeResource';

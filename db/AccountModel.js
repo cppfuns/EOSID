@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm-expo/browser';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 export const ACCOUNT_KEY = 'Account';
 
