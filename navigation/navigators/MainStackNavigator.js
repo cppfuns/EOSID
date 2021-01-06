@@ -5,7 +5,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import { Linking as ExpoLinking } from 'expo';
 
-import StackViewStyleInterpolator from 'react-navigation-stack/src/views/StackView/StackViewStyleInterpolator';
+import StackViewStyleInterpolator from 'react-navigation-stack';
 
 import {
   AccountScreen,
