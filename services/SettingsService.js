@@ -1,17 +1,23 @@
-import { getRepository } from 'typeorm';
+import { getRepository, getConnection } from 'typeorm';
 
 import { SettingsModel } from '../db';
 
 export default class SettingsService {
   static async getSettings() {
-    const SettingsRepo = getRepository(SettingsModel);
-    const settings = await SettingsRepo.find();
+    try {
+      let connection = await getConnection();
+      const SettingsRepo = connection.getRepository(SettingsModel);
+      const settings = await SettingsRepo.find();
 
-    return settings.length ? settings[0] : null;
+      return settings.length ? settings[0] : null;
+    } catch (e) {
+      console.error("Error: " + e);
+    }
   }
 
   static async initializeSettings() {
-    const SettingsRepo = getRepository(SettingsModel);
+    let connection = await getConnection();
+    const SettingsRepo = connection.getRepository(SettingsModel);
 
     // create settings instance
     const settings = new SettingsModel();
@@ -23,7 +29,8 @@ export default class SettingsService {
   }
 
   static async updateSettings({ id, ...settingsInfo }) {
-    const SettingsRepo = getRepository(SettingsModel);
+    let connection = await getConnection();
+    const SettingsRepo = connection.getRepository(SettingsModel);
 
     // save
     await SettingsRepo.update(id, settingsInfo);

@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from 'typeorm';
 
 export const NETWORK_KEY = 'network';
 
@@ -35,7 +35,7 @@ export class NetworkError {
 }
 
 @Entity(NETWORK_KEY)
-export class NetworkModel {
+export class NetworkModel extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id = undefined;
 
@@ -52,6 +52,7 @@ export class NetworkModel {
   chainId = '';
 
   constructor(data) {
+    super();
     if (data) {
       const { id, name, chainURL, historyURL, chainId } = data;
 

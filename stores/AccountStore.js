@@ -9,7 +9,7 @@ import SettingsStore from './SettingsStore';
 import api from '../utils/eos/API';
 import TokenContracts from '../constants/TokenContracts';
 
-class Store {
+class AccountStore {
   @observable
   accounts = [];
 
@@ -215,7 +215,7 @@ class Store {
       action.action_trace.act.data && action.action_trace.act.data.to
         ? action.action_trace.receipt.receiver === account.name
         : action.action_trace.receipt.receiver ===
-          action.action_trace.act.account
+        action.action_trace.act.account
     );
 
     // when refresh actions
@@ -270,4 +270,4 @@ class Store {
   }
 }
 
-export default new Store();
+export default new AccountStore();

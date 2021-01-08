@@ -4,7 +4,7 @@ import { PincodeService } from '../services';
 import SettingsStore from './SettingsStore';
 import AccountStore from './AccountStore';
 
-class Store {
+class PincodeStore {
   @observable
   accountPincode = '';
 
@@ -54,4 +54,4 @@ class Store {
   }
 }
 
-export default new Store();
+export default new PincodeStore();

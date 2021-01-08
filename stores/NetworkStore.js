@@ -8,7 +8,7 @@ import Chains from '../constants/Chains';
 import api from '../utils/eos/API';
 import SettingsStore from './SettingsStore';
 
-class Store {
+class NetworkStore {
   @observable
   chains = Chains.reduce((ac, chain) => {
     ac[chain.id] = chain;
@@ -107,4 +107,4 @@ class Store {
   }
 }
 
-export default new Store();
+export default new NetworkStore();

@@ -31,9 +31,7 @@ const theme = {
 
 export default class App extends Component {
   componentDidCatch(error, errorInfo) {
-    Sentry.captureException(error, {
-      extra: errorInfo
-    });
+
   }
 
   render() {

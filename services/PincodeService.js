@@ -10,9 +10,13 @@ const serviceTypes = {
 
 export default class PincodeService {
   static async getPincode(type) {
-    const service = serviceTypes[type];
+    try {
+      const service = serviceTypes[type];
 
-    return await SecureStore.getItemAsync(service);
+      return await SecureStore.getItemAsync(service);
+    } catch (e) {
+      console.error("Error: " + e);
+    }
   }
 
   static async validatePincode(pincode, type) {

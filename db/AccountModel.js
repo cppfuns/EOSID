@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from 'typeorm';
 
 export const ACCOUNT_KEY = 'Account';
 
@@ -50,7 +50,7 @@ export class AccountError {
 
 // define model
 @Entity(ACCOUNT_KEY)
-export class AccountModel {
+export class AccountModel extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id = undefined;
 
@@ -64,6 +64,7 @@ export class AccountModel {
   keys = [];
 
   constructor(data) {
+    super();
     if (data) {
       const { id, name, chainId, keys = [] } = data;
 

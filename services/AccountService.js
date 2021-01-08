@@ -6,14 +6,18 @@ import api from '../utils/eos/API';
 
 export default class AccountService {
   static async getAccounts(chainId) {
-    const AccountRepo = getRepository(AccountModel);
-    const where = {};
-    if (chainId) {
-      where.chainId = chainId;
-    }
-    const accounts = await AccountRepo.find(where);
+    try {
+      const AccountRepo = getRepository(AccountModel);
+      const where = {};
+      if (chainId) {
+        where.chainId = chainId;
+      }
+      const accounts = await AccountRepo.find(where);
 
-    return accounts;
+      return accounts;
+    } catch (e) {
+      console.error("Error: " + e);
+    }
   }
 
   static async findKeyAccount(publicKey, url) {

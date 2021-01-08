@@ -3,7 +3,7 @@ import { observable, computed, action } from 'mobx';
 import { SettingsService } from '../services';
 import { SettingsModel } from '../db';
 
-class Store {
+class SettingsStore {
   @observable
   settings = SettingsModel.placeholder;
 
@@ -46,4 +46,4 @@ class Store {
   }
 }
 
-export default new Store();
+export default new SettingsStore();

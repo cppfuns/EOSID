@@ -1,9 +1,9 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from 'typeorm';
 
 export const SETTINGS_KEY = 'settings';
 
 @Entity(SETTINGS_KEY)
-export class SettingsModel {
+export class SettingsModel extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id = undefined;
 
@@ -20,6 +20,7 @@ export class SettingsModel {
   appPincodeEnabled = false;
 
   constructor(data) {
+    super();
     if (data) {
       const {
         id,

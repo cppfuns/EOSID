@@ -1,9 +1,9 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from 'typeorm';
 
 export const TRANSFER_LOG_KEY = 'transferlog';
 
 @Entity(TRANSFER_LOG_KEY)
-export class TransferLogModel {
+export class TransferLogModel extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id = undefined;
 
@@ -23,6 +23,7 @@ export class TransferLogModel {
   createdAt = '';
 
   constructor(data) {
+    super();
     if (data) {
       const {
         id,
